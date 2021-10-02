@@ -1,10 +1,14 @@
-<div class="container">
-    <div class="card" style="width: 18rem;"> 
-        <img src="..." class="card-img-top" alt="..."> <!--Image product-->
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5> <!--Name product-->
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <!--Price product-->
-            <a href="#" class="btn btn-primary">Go somewhere</a> <!--Botón carrito de compra-->
+<div class="container" *ngFor="let product of products">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card pad" style="width: 18rem;"> 
+                <img src="{{ product.url_image }}" class="card-img-top" alt="..."> <!--Image product-->
+                <div class="card-body">
+                    <h4 class="card-title">{{ product.name }}</h4> <!--Name product-->
+                    <p class="card-text">${{ product.price }}</p> <!--Price product-->
+                    <a href="#" class="btn btn-primary rounded-circle border">O</a> <!--Botón carrito de compra-->
+                </div>
+            </div>
         </div>
     </div>
 </div>
