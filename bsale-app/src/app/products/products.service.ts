@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Products } from './products';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
+import { URL_BACKEND } from '../config/config';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ import { map, tap } from 'rxjs/operators';
 
 export class ProductService {
 
-  private urlEndPoint: string = 'http://localhost:8080/api/product'
+  private urlEndPoint: string = URL_BACKEND + '/api/product';
   constructor(private http: HttpClient) { }
 
   getProducts(page: number): Observable<any> {
