@@ -12,6 +12,11 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductsComponent implements OnInit {
 
   products: Products[];
+
+  filters = {
+    keyword: ''
+  }
+
   paginator: any;
 
   constructor(private productsService: ProductService, private activatedRoute: ActivatedRoute) {
@@ -31,4 +36,6 @@ export class ProductsComponent implements OnInit {
       })
     ).subscribe();})
   }
+
+
 }

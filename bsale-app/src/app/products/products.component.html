@@ -1,4 +1,12 @@
 <div class="container">
+    <br>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Buscar</h5>
+            <input type="text" [(ngModel)]="filters.keyword" name="keyword"><button type="button" class="btn btn-primary">Filtrar</button>
+        </div>
+    </div>
+    <br>
     <div class="row" *ngFor="let product of products">
         <div class="col-md-auto">
             <div class="card pad" style="width: 18rem;"> 
@@ -6,7 +14,7 @@
                 <div class="card-body">
                     <h4 class="card-title">{{ product.name }}</h4> <!--Name product-->
                     <p class="card-text">${{ product.price }}</p> <!--Price product-->
-                    <a href="#" class="btn btn-primary rounded-circle border">O</a> <!--Botón carrito de compra-->
+                    <a href="#" class="btn btn-primary rounded-circle border">$</a> <!--Botón carrito de compra-->
                 </div>
             </div>
         </div>

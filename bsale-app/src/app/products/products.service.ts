@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Products } from './products';
-//import { PRODUCTS } from './products.json';
-import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Products } from './products';
+import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 
 @Injectable({
@@ -13,8 +12,6 @@ export class ProductService {
 
   private urlEndPoint: string = 'http://localhost:8080/api/product'
   constructor(private http: HttpClient) { }
-
-  filterProducts = '';
 
   getProducts(page: number): Observable<any> {
     
